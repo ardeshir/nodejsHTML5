@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tasks</title>
+		<link href="http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel="stylesheets" type="text/css" />
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		<link href="app.css" rel="stylesheet" />
+		<script src="lib/jquery-1.12.4.min.js"></script>
+                <script src="appStore.js"></script>
+		<script src="app.js"></script>
+<!-- script>
+setInterval(() => {
+    // Make frontend call to lambda
+    $.get({
+        url: GET_SAM_COUNT_URL
+    }).done(function(data) {
+        DESIRED_SAM_COUNT = data;
+    });
+
+}, TIME_BETWEEN_COUNT_UPDATE_MS);
+</script -->
+	</head>
+	<body>
+	
+	<div id="app">
+	
+	<header>Univrs is  </header>
+
+	<div id="main">
+		<div id="add-task">
+		   <label for="new-task-name">Type away: </label>
+		   <input type="text" id="new-task-name"
+			  title="Enter a task name" placeholder="Enter a task name" />
+		</div><!-- end of add -->
+		<ul id="task-list">
+		</ul>
+
+	</div><!-- end of main -->
+	
+	<footer></footer>
+
+	</div> <!-- end of app -->
+	<!-- start templates -->
+	<div id="templates" class="hidden">
+		<ul id="task-template">
+			<li class="task">
+			  <div class="tools">
+				<button class="delete" title="Delete"> x </button>
+				<button class="move-up" title="Up"> ^ </button>
+				<button class="move-down" title="Down"> v </button>
+			</div>
+			<span class="task-name"></span>
+			<input type="text" class="task-name hidden" />
+			</li>
+		</ul>
+	</div> <!-- end of templates -->
+	</body>
+</html>
