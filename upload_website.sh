@@ -2,13 +2,11 @@
 
 function usage {
      echo """
-     This script is to upload the website components of the AWS Serverless Samfarm demo to the s3 bucket created to host
-     the website. To use, pass the s3 bucket name after the script name.
 
      upload_website.sh <s3_bucket_name>
 
      ex:
-     upload_website.sh samfarm-app-demo-app-bucket
+     upload_website.sh website
      """
  }
 
